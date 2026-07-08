@@ -34,6 +34,7 @@ A serverless CRUD notes taking API deployed with AWS.
   </a>
 </p>
 
+---
 [![Credly](https://img.shields.io/badge/Credly-%23FF6B00.svg?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/luke-ferley)
 
 ---
