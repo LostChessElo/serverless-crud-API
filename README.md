@@ -1,16 +1,6 @@
 # Overview
 A serverless CRUD notes taking API deployed with AWS.
-## Table of Contents
-
-- [Overview](#overview)
-  - [Table of Contents](#table-of-contents)
-  - [Tech Stack](#tech-stack)
-  - [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
-  - [API endpoints and request routing](#api-endpoints-and-request-routing)
-  - [| DELETE | `/notes/{id}`  | Delete a note                   | None                                             | `200` : delete confirmation |](#-delete--notesid---delete-a-note--------------------none----------------------------------------------200--delete-confirmation-)
-
-## Tech Stack
-
+###### 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![boto3](https://img.shields.io/badge/boto3-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat&logo=pytest&logoColor=white)
@@ -21,7 +11,12 @@ A serverless CRUD notes taking API deployed with AWS.
 ![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=flat&logo=amazonwebservices&logoColor=white)
 ![IAM](https://img.shields.io/badge/IAM-DD344C?style=flat&logo=amazonwebservices&logoColor=white)
 ![AWS Budgets](https://img.shields.io/badge/AWS%20Budgets-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
+## Table of Contents
 
+- [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
+  - [API endpoints and request routing](#api-endpoints-and-request-routing)
 ---
 ## Badges I've earned through AWS Edcucate  
 
