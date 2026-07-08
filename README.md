@@ -24,10 +24,13 @@ A serverless CRUD notes taking API deployed with AWS.
 
 <p>
   <a href="https://www.credly.com/badges/7c5df9be-3099-4fcf-a46b-58fde3d85f0f/public_url">
-    <img src="https://images.credly.com/size/110x110/images/3b1b42e6-dfc2-492b-90df-8058096cb93d/blob" alt="AWS Educate: Getting Started with Storage" width="100" />
+    <img src="https://images.credly.com/size/110x110/images/3b1b42e6-dfc2-492b-90df-8058096cb93d/blob" alt="AWS Educate: Getting Started with Storage" width="150" />
   </a>
   <a href="https://www.credly.com/badges/bd83d1f8-79bf-49a8-b0ab-24ca19da1e0b/public_url">
-    <img src="https://images.credly.com/size/110x110/images/e51a8579-188d-4363-8ed1-12ad164ef57b/blob" alt="AWS Educate: Getting Started with Compute" width="100" />
+    <img src="https://images.credly.com/size/110x110/images/e51a8579-188d-4363-8ed1-12ad164ef57b/blob" alt="AWS Educate: Getting Started with Compute" width="180" />
+  </a>
+  <a href="https://www.credly.com/badges/01d8f2c8-06ab-4b46-9afd-b0700727065f/public_url">
+    <img src="https://images.credly.com/size/110x110/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" alt="AWS Educate: Introduction to Generative AI" width="150" />
   </a>
 </p>
 
