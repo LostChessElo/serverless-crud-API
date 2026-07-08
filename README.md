@@ -1,7 +1,6 @@
 ## Table of Contents
 
 - [Overview](#overview)
-  - [Table of Contents](#table-of-contents)
   - [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
   - [API endpoints and request routing](#api-endpoints-and-request-routing)
 ---
