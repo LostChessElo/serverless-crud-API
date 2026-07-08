@@ -1,4 +1,12 @@
-# Overview
+## Table of Contents
+
+- [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
+  - [API endpoints and request routing](#api-endpoints-and-request-routing)
+---
+
+## Overview
 A serverless CRUD notes taking API deployed with AWS.
 ###### 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
@@ -11,12 +19,7 @@ A serverless CRUD notes taking API deployed with AWS.
 ![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=flat&logo=amazonwebservices&logoColor=white)
 ![IAM](https://img.shields.io/badge/IAM-DD344C?style=flat&logo=amazonwebservices&logoColor=white)
 ![AWS Budgets](https://img.shields.io/badge/AWS%20Budgets-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
-## Table of Contents
 
-- [Overview](#overview)
-  - [Table of Contents](#table-of-contents)
-  - [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
-  - [API endpoints and request routing](#api-endpoints-and-request-routing)
 ---
 ## Badges I've earned through AWS Edcucate  
 
