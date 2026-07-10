@@ -7,7 +7,10 @@ from aws_lambda_typing.events import APIGatewayProxyEventV1
 
 def delete_handler(event: APIGatewayProxyEventV1) -> dict[str, Any]:
     try:
-        note_id: str = event['pathParameters']["id"]
+        params = event.get("pathParameters") or {}
+        note_id = params.get("id")
+        if not note_id:
+            return error(400, "Bad request.")
         response = table.delete_item(
             Key={
                 "id": note_id
@@ -20,7 +23,6 @@ def delete_handler(event: APIGatewayProxyEventV1) -> dict[str, Any]:
 
         return ok({"message": "Note deleted successfully."}, 200)
     except KeyError:
-        return error(400, "Id parameter missing.")
+        return error(400, "Bad request.")
     except ClientError as e:
         return error(500, e.response["Error"]["Message"])
-    

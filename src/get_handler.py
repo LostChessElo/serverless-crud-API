@@ -6,7 +6,7 @@ from typing import Any
 
 def get_handler() -> dict[str, Any]:
     try:
-        content: dict[str, Any] = table.scan()["Items"]
+        content: list[dict[str, Any]] = table.scan()["Items"]
         return ok(content)
     except ClientError as e:
         return error(500, e.response["Error"]["Message"])
