@@ -690,35 +690,27 @@ dependencies = [
 
 [package.optional-dependencies]
 dev = [
+    { name = "aws-lambda-typing" },
+    { name = "boto3-stubs", extra = ["dynamodb"] },
     { name = "moto" },
     { name = "mypy" },
+    { name = "mypy-boto3-dynamodb" },
     { name = "pytest" },
     { name = "ruff" },
 ]
 
-[package.dev-dependencies]
-dev = [
-    { name = "aws-lambda-typing" },
-    { name = "boto3-stubs", extra = ["dynamodb"] },
-    { name = "mypy-boto3-dynamodb" },
-]
-
 [package.metadata]
 requires-dist = [
+    { name = "aws-lambda-typing", marker = "extra == 'dev'", specifier = ">=2.20.0" },
     { name = "boto3", specifier = ">=1.43.45" },
+    { name = "boto3-stubs", extras = ["dynamodb"], marker = "extra == 'dev'", specifier = ">=1.43.45" },
     { name = "moto", marker = "extra == 'dev'", specifier = ">=5.2.2" },
     { name = "mypy", marker = "extra == 'dev'", specifier = ">=2.2.0" },
+    { name = "mypy-boto3-dynamodb", marker = "extra == 'dev'", specifier = ">=1.43.0" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=9.1.1" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.15.21" },
 ]
 provides-extras = ["dev"]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "aws-lambda-typing", specifier = ">=2.20.0" },
-    { name = "boto3-stubs", extras = ["dynamodb"], specifier = ">=1.43.45" },
-    { name = "mypy-boto3-dynamodb", specifier = ">=1.43.0" },
-]
 
 [[package]]
 name = "six"

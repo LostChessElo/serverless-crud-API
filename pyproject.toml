@@ -14,10 +14,6 @@ dev = [
     "mypy>=2.2.0",
     "pytest>=9.1.1",
     "ruff>=0.15.21",
-]
-
-[dependency-groups]
-dev = [
     "aws-lambda-typing>=2.20.0",
     "boto3-stubs[dynamodb]>=1.43.45",
     "mypy-boto3-dynamodb>=1.43.0",
