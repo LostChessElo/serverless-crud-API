@@ -42,7 +42,9 @@ def test_no_id_returns_400(mock_table):
     )
 
     event = {
-        "pathParameters": {}
+        "pathParameters": {
+            
+        }
     }
 
     response = delete_handler(event)
