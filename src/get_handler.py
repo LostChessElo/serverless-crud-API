@@ -5,7 +5,7 @@ from typing import Any
 from aws_lambda_typing.context import Context
 from aws_lambda_typing.events import APIGatewayProxyEventV1
 
-def get_handler(event: APIGatewayProxyEventV1, context: Context) -> dict[str, Any]:
+def get_handler() -> dict[str, Any]:
     try:
         content = table.scan()["Items"]
         return ok(content)
