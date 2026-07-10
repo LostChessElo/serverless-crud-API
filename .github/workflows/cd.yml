@@ -12,7 +12,7 @@ permissions:
 
 env:
   FUNCTION_NAME: notes-api 
-  AWS_REGION: us-east-1
+  AWS_REGION: af-south-1
 
 jobs:
   deploy:
