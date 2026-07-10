@@ -1,8 +1,11 @@
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Overview](#overview)
-  - [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
-  - [API endpoints and request routing](#api-endpoints-and-request-routing)
+        - [](#)
+- [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
+- [API endpoints and request routing](#api-endpoints-and-request-routing)
+- [Project Structure](#project-structure)
 ---
 
 ## Overview
@@ -46,4 +49,9 @@ A serverless CRUD notes taking API deployed with AWS.
 | POST   | `/notes`       | Create a note                   | `{ "name": string, "description": string }` : `name` required | `201` : created note      |
 | PATCH  | `/notes/{id}`  | Update a note's fields          | `{ "name"?: string, "description"?: string }` : both optional; empty body returns note unchanged | `200` : updated note      |
 | DELETE | `/notes/{id}`  | Delete a note                   | None                                             | `200` : delete confirmation |
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Project Structure 
+```code 
+
+```
