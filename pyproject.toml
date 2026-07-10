@@ -8,7 +8,7 @@ dependencies = [
     "boto3>=1.43.45"
 ]
 
-[dependency-groups]
+[project.optional-dependencies]
 dev = [
     "moto>=5.2.2",
     "mypy>=2.2.0",
