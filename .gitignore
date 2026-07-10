@@ -1,0 +1,52 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.Python
+
+# ---- uv / virtual environments ----
+# NOTE: commit uv.lock and .python-version for reproducible builds.
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Environment / secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+
+# ---- AWS / Serverless deploy artifacts ----
+.serverless/
+.aws-sam/
+cdk.out/
+samconfig.toml
+node_modules/
+.dynamodb/
+*.zip
+
+# ---- Testing & coverage ----
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# ---- Linters / type checkers ----
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+
+# ---- IDE / editor ----
+.idea/
+.vscode/
+*.swp
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
