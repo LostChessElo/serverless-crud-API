@@ -1,9 +1,10 @@
-from db import table 
+from db import table
 from response import ok, error
 from botocore.exceptions import ClientError
 
 from typing import Any
 from aws_lambda_typing.events import APIGatewayProxyEventV1
+
 
 def delete_handler(event: APIGatewayProxyEventV1) -> dict[str, Any]:
     try:
@@ -11,12 +12,7 @@ def delete_handler(event: APIGatewayProxyEventV1) -> dict[str, Any]:
         note_id = params.get("id")
         if not note_id:
             return error(400, "Bad request.")
-        response = table.delete_item(
-            Key={
-                "id": note_id
-            },
-            ReturnValues="ALL_OLD"
-        )
+        response = table.delete_item(Key={"id": note_id}, ReturnValues="ALL_OLD")
 
         if "Attributes" not in response:
             return error(404, "Note not found.")

@@ -1,8 +1,9 @@
 from db import table
-from response import ok, error 
+from response import ok, error
 from botocore.exceptions import ClientError
 
 from typing import Any
+
 
 def get_handler() -> dict[str, Any]:
     try:
