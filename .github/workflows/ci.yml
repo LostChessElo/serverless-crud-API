@@ -11,11 +11,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      AWS_DEFAULT_REGION: af-south-1
+      AWS_ACCESS_KEY_ID: testing
+      AWS_SECRET_ACCESS_KEY: testing
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - run: uv python install 3.14
-      - run: uv sync --extra dev
+      - run: uv python install 3.13
+      - run: uv sync --group dev
       - run: uv run pytest
 
   lint:
