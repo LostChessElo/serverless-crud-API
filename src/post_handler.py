@@ -3,12 +3,13 @@ from db import table
 from response import ok, error
 from botocore.exceptions import ClientError
 
-from typing import Any
-from aws_lambda_typing.events import APIGatewayProxyEventV1
-from aws_lambda_typing.context import Context
+from typing import TYPE_CHECKING, Any
+if TYPE_CHECKING:
+    from aws_lambda_typing.events import APIGatewayProxyEventV1
+    from aws_lambda_typing.context import Context
 
 
-def post_handler(event: APIGatewayProxyEventV1, context: Context) -> dict[str, Any]:
+def post_handler(event: "APIGatewayProxyEventV1", context: "Context") -> dict[str, Any]:
     try:
         raw_data = event.get("body")
         if not raw_data:

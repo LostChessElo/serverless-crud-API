@@ -4,12 +4,13 @@ from post_handler import post_handler
 from patch_handler import patch_handler
 from delete_handler import delete_handler
 
-from typing import Any
-from aws_lambda_typing.events import APIGatewayProxyEventV1
-from aws_lambda_typing.context import Context
+from typing import TYPE_CHECKING, Any
+if TYPE_CHECKING:
+    from aws_lambda_typing.events import APIGatewayProxyEventV1
+    from aws_lambda_typing.context import Context
 
 
-def handler(event: APIGatewayProxyEventV1, context: Context) -> dict[str, Any]:
+def handler(event: "APIGatewayProxyEventV1", context: "Context") -> dict[str, Any]:
     match event.get("httpMethod"):
         case "GET":
             return get_handler()

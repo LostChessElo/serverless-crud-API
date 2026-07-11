@@ -2,11 +2,12 @@ from db import table
 from response import ok, error
 from botocore.exceptions import ClientError
 
-from typing import Any
-from aws_lambda_typing.events import APIGatewayProxyEventV1
+from typing import TYPE_CHECKING, Any
+if TYPE_CHECKING:
+    from aws_lambda_typing.events import APIGatewayProxyEventV1
 
 
-def delete_handler(event: APIGatewayProxyEventV1) -> dict[str, Any]:
+def delete_handler(event: "APIGatewayProxyEventV1") -> dict[str, Any]:
     try:
         params = event.get("pathParameters") or {}
         note_id = params.get("id")
