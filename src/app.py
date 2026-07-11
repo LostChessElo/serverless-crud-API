@@ -1,4 +1,4 @@
-from response import error 
+from response import error
 from get_handler import get_handler
 from post_handler import post_handler
 from patch_handler import patch_handler
@@ -7,6 +7,7 @@ from delete_handler import delete_handler
 from typing import Any
 from aws_lambda_typing.events import APIGatewayProxyEventV1
 from aws_lambda_typing.context import Context
+
 
 def handler(event: APIGatewayProxyEventV1, context: Context) -> dict[str, Any]:
     match event.get("httpMethod"):
@@ -20,5 +21,3 @@ def handler(event: APIGatewayProxyEventV1, context: Context) -> dict[str, Any]:
             return delete_handler(event)
         case _:
             return error(405, "Method not allowed.")
-    
-    
