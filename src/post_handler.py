@@ -13,12 +13,12 @@ def post_handler(event: APIGatewayProxyEventV1, context: Context) -> dict[str, A
         raw_data = event.get("body")
         if not raw_data:
             return error(400, "Bad request.")
-        
+
         body: Any = json.loads(raw_data)
         err = _validate_rq_body(body)
         if err:
             return error(400, err)
-        
+
         note_id = context.aws_request_id
         table.put_item(
             Item={
