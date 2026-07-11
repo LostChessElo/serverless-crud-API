@@ -6,6 +6,7 @@
 - [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
 - [API endpoints and request routing](#api-endpoints-and-request-routing)
 - [Architecture](#architecture)
+- [Project structure](#project-structure)
 ---
 
 ## Overview
@@ -56,3 +57,37 @@ A serverless CRUD notes taking API deployed with AWS.
 <p align="center">
   <img src="docs/Architecture.drawio.svg" alt="Serverless Notes API architecture" width="800" />
 </p>
+
+---
+
+## Project structure
+
+```code
+serverless-crud-API/
+├── .github/
+│   └── workflows/
+│       ├── ci.yml              # lint, typecheck, test on push/PR
+│       └── cd.yml              # zip src/ -> update Lambda (manual approval)
+├── .vscode/
+│   └── settings.json           # editor config (analysis extraPaths)
+├── docs/
+│   └── Architecture.drawio.svg # architecture diagram
+├── src/                        # Lambda code to be zipped and deployed
+│   ├── app.py                  # dispatcher: routes by httpMethod
+│   ├── get_handler.py
+│   ├── post_handler.py
+│   ├── patch_handler.py
+│   ├── delete_handler.py
+│   ├── db.py                   # DynamoDB table handle
+│   └── response.py             # ok()/error() response helpers
+├── tests/
+│   ├── conftest.py             # mock DynamoDB fixtures
+│   ├── test_get.py
+│   ├── test_delete.py
+│   └── test_validation.py
+├── .gitignore
+├── .python-version             # pins interpreter
+├── pyproject.toml              # deps and tool config 
+├── uv.lock                     # locked deps
+└── README.md
+```
