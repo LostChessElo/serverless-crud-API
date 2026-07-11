@@ -38,3 +38,69 @@ def test_note_already_exists_returns_200(mock_table):
     assert response.get("statusCode") == 200
     assert body.get("message") != None
     assert body.get("message") == "Note added successfully."
+
+def test_empty_name_returns_400(mock_table):
+    context = Context()
+    event = {
+        "body": '{"name": "", "description": "Note to test"}'
+    }
+    response = post_handler(event, context)
+    body = json.loads(response.get("body"))
+    assert response.get("statusCode") == 400
+    assert body.get("message") != None
+    assert body.get("message") == "Bad request."
+
+def test_malformed_rqq_body_returns_400(mock_table):
+    context = Context()
+    event = {
+        "body": '[]'
+    }
+    response = post_handler(event, context)
+    body = json.loads(response.get("body"))
+    assert response.get("statusCode") == 400
+    assert body.get("message") != None
+    assert body.get("message") == "Bad request."
+
+def test_no_description_returns_400(mock_table):
+    context = Context()
+    event = {
+        "body": '{"name": "123"}'
+    }
+    response = post_handler(event, context)
+    body = json.loads(response.get("body"))
+    assert response.get("statusCode") == 400
+    assert body.get("message") != None
+    assert body.get("message") == "Bad request."
+
+def test_no_name_returns_400(mock_table):
+    context = Context()
+    event = {
+        "body": '{ "description": "Note to test"}'
+    }
+    response = post_handler(event, context)
+    body = json.loads(response.get("body"))
+    assert response.get("statusCode") == 400
+    assert body.get("message") != None
+    assert body.get("message") == "Bad request."
+
+def test_json_load_error_caught(mock_table):
+    context = Context()
+    event = {
+        "body": "[]"
+    }
+    response = post_handler(event, context)
+    body = json.loads(response.get("body"))
+    assert response.get("statusCode") == 400
+    assert body.get("message") != None
+    assert body.get("message") == "Bad request."
+
+def test_reqquest_not_json_returns_400(mock_table):
+    context = Context()
+    event = {
+        "body": 'test'
+    }
+    response = post_handler(event, context)
+    body = json.loads(response.get("body"))
+    assert response.get("statusCode") == 400
+    assert body.get("message") != None
+    assert body.get("message") == "Bad request."

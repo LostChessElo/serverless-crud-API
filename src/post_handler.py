@@ -39,7 +39,7 @@ def post_handler(event: APIGatewayProxyEventV1, context: Context) -> dict[str, A
 def _validate_rq_body(body: Any) -> None | str:
     if not isinstance(body, dict):
         return "Bad request."
-    if "name" not in body or body["name"] is None:
+    if "name" not in body or not body["name"]:
         return "Bad request."
     if "description" not in body:
         return "Bad request."
