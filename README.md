@@ -5,7 +5,7 @@
         - [](#)
 - [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
 - [API endpoints and request routing](#api-endpoints-and-request-routing)
-- [Project Structure](#project-structure)
+- [Architecture](#architecture)
 ---
 
 ## Overview
@@ -51,7 +51,8 @@ A serverless CRUD notes taking API deployed with AWS.
 | DELETE | `/notes/{id}`  | Delete a note                   | None                                             | `200` : delete confirmation |
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Project Structure 
-```code 
+## Architecture
 
-```
+<p align="center">
+  <img src="docs/Architecture.drawio.svg" alt="Serverless Notes API architecture" width="800" />
+</p>
