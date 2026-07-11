@@ -1,7 +1,7 @@
 import json
 from get_handler import get_handler
 
-def test_empty_table_returns_empty_list():
+def test_empty_table_returns_empty_list(mock_table):
     response = get_handler()
     assert response.get("statusCode") == 200
     assert response.get("headers").get("Content-Type") == "application/json"
