@@ -1,17 +1,28 @@
-## Table of Contents
+# Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Overview](#overview)
-        - [](#)
-- [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
-- [API endpoints and request routing](#api-endpoints-and-request-routing)
-- [Architecture](#architecture)
-- [Project structure](#project-structure)
+  - [Overview](#overview)
+  - [Tech Stack](#tech-stack)
+  - [Badges I've earned through AWS Edcucate](#badges-ive-earned-through-aws-edcucate)
+  - [Architecture](#architecture)
+  - [API endpoints and request routing](#api-endpoints-and-request-routing)
+  - [Project structure](#project-structure)
 ---
-
 ## Overview
-A serverless CRUD notes taking API deployed with AWS.
-###### 
+
+A serverless REST API for managing notes, built and deployed on AWS. It supports full CRUD operations (create, read, update, and delete) over a `/notes` endpoint.
+
+The architecture is fully managed and pay-per-use:
+
+- **AWS Lambda** runs the application code (Python), scaling automatically with demand.
+- **Amazon DynamoDB** is the NoSQL database, storing records in a `notes` table.
+- **API Gateway** exposes the REST endpoints and triggers the Lambda function on each request.
+- **IAM** secures the stack, providing the Lambda execution role and an OIDC role for keyless deployments from CI/CD.
+- **CloudWatch** captures logs and metrics for observability.
+- **AWS Budgets** guards against unexpected cost, with an alert configured to trigger on any spend above $0.01.
+
+---
+## Tech Stack
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![boto3](https://img.shields.io/badge/boto3-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat&logo=pytest&logoColor=white)
@@ -42,6 +53,14 @@ A serverless CRUD notes taking API deployed with AWS.
 [![Credly](https://img.shields.io/badge/Credly-%23FF6B00.svg?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/luke-ferley)
 
 ---
+## Architecture
+
+<p align="center">
+  <img src="docs/Architecture.drawio.svg" alt="Serverless Notes API architecture" width="800" />
+</p>
+
+---
+
 ## API endpoints and request routing 
 
 | Method | Path           | Description                     | Request Body                                  | Success Response          |
@@ -52,14 +71,6 @@ A serverless CRUD notes taking API deployed with AWS.
 | DELETE | `/notes/{id}`  | Delete a note                   | None                                             | `200` : delete confirmation |
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Architecture
-
-<p align="center">
-  <img src="docs/Architecture.drawio.svg" alt="Serverless Notes API architecture" width="800" />
-</p>
-
----
-
 ## Project structure
 
 ```code
