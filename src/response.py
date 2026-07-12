@@ -20,6 +20,6 @@ def ok(data: Any, status: int = 200) -> dict[str, Any]:
 def error(status: int, message: str) -> dict[str, Any]:
     return {
         "statusCode": status,
-        "headers": {"Content-Type": "application/json"},
+        "headers": {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"},
         "body": json.dumps({"message": message}),
     }
