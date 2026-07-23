@@ -53,7 +53,7 @@ The architecture is fully managed and pay-per-use:
 [![Credly](https://img.shields.io/badge/Credly-%23FF6B00.svg?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/luke-ferley)
 
 ---
-## Architecture
+## [Architecture](https://github.com/LostChessElo/serverless-crud-API/wiki/Live-API)
 
 <p align="center">
   <img src="docs/Architecture.drawio.svg" alt="Serverless Notes API architecture" width="800" />
