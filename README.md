@@ -102,3 +102,5 @@ serverless-crud-API/
 ├── uv.lock                     # locked deps
 └── README.md
 ```
+
+WeThinkCode_ LMS: WTC-J6ECFL2N
